@@ -1,0 +1,176 @@
+
+    
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    	<meta charset="utf-8"/>
+    	<meta name="viewport" content="width=device-width,initial-scale=1.0/">
+    	<title>Reevs Coding World</title>
+    	<style>
+    	      h1 {
+                   text-shadow: 2px 2px 4px #000000;
+    	       } 
+                   
+    		body{
+    			margin: 0;
+    			padding: 0;
+    			background:linear-gradient(to right,#BE25B7,#BEA525,#009688);
+    			font-family: 'segoe UI',Tahoma, geneva verdana, sans-serief;
+    			color: white;
+    			display: flex;
+    			flex-direction: column;
+    			align-items: center;
+    			justify-content: center;
+    			height: 100vh;
+    			overflow: hidden; 
+    		}
+    		.logo{
+    			font-size: 3rem;
+    			font-weight: bold;
+    			letter-spacing: 3px;
+    			background:linear-gradient(90deg,#ff8a00,#e52e71,#9b00ff);
+    			-webkit-background-clip:text;
+    			-webkit-text-fill-color:transparent;
+    			animation: SlideIn 2s ease forwards, glow 2s infinite alternate;
+    			opacity: 0;
+    			text-shadow: -2px -2px 0 black,
+    			             -2px -2px 0 black,
+    			             -2px -2px 0 black,
+    			             -2px -2px 0 black,
+    			             
+    			             
+    			                          
+    			0 0 10px #e52e71, 0 0 20px #ff8a00, 0 0 30px#9b00ff;
+    			animation: blink 1s infinite;
+    			             	    
+    		}
+
+    		.tagline{
+    			font-size: 1.2rem;
+    			margin-top: 10px;
+    			color: #dcddcd
+    			font-style:italic;
+
+    		}
+
+    	.name{
+    		margin-top: 30px;
+    		font-size: 2rem;
+    		font-weight: bold;
+    		color: #fff;
+            text-shadow: 0 0 10px #00fff7, 0 0 20px #00bcd4;
+            font-family: 'courier new',courier,monospace;
+    		}
+    		@keyframes slideIn{
+    			0%{
+    				transform: translateY(-50px);
+    				opacity: 0;
+    			}
+    			100%{
+    				transform: translateY(0);
+    				opacity: 1;
+    			}
+    		}
+    		@keyframes glow {
+    			0%{
+    				text-shadow:0 0 10px #ff8a00, 0 0 20px #e52e71;
+
+    			}
+
+    			100%{
+                     text-shadow: 0 020px #ff8a00,0 0 40px #e52e71;
+    			}
+                }
+                .textline{
+                	font-size:1.2rem;
+                	margin-top: 10px;
+                	color: #dcdcdc;
+                	text-shadow: 0 0 10px #00fff7,0 0 20px #00bcd4;
+                	font-family: 'courier new', courier,monospace;
+                }
+    		#animatedName::after {
+    			font-size: 2rem;
+    			animation: blink 1s infinite;
+    			color: black;
+                content: '|' ;
+    		}
+
+    		.intro-text{
+    			margin-top: 20px;
+    		    max-width: 700px;
+    		    text-align: center;
+                font-size: 1.1rem;
+                line-height: 1.5;
+                color: #f0f0f0;
+                padding: 0 10px;
+                font-style: italic;
+            }
+
+            .project{
+               margin-top: 50px;
+               text-align: center;
+            }
+    		.projecth2{
+    			font-size: 2rem;
+               color: #00ffe0;
+               margin-bottom: 20px; 
+    		}
+
+    		.project-link{
+    			display: block;
+                margin: 10px 0;
+                font-size: 1.1rem;
+                color: #ffda77;
+                text-decoration:none;
+                transition:color 0.3s ease;
+
+    		}
+
+    		.project-link:a:hover{
+    			color: #ff9d00;
+                text-decoration:none;
+    		}
+    		@keyframes blink{
+    			0%,100%{opacity: 1;}
+    			50%{opacity: 0.1;}
+    		}
+            }
+    		
+    	</style>
+    </head>
+    <body>
+    	<h1><span id="animatedName">Raveena Goswami</span></h1>
+         <div class="logo">Reevs Coding World</div> 
+         <div class="tagline">Creating magic with code
+         <span id="animatedName"> </span></div>
+         <div class="intro-text">
+         	<br>Hi I'am a Passionate Front-end Web Developer on a journey to create modern, interactive, and user-friendly websites.
+         	<br>I Love bringing Creative designs to life using<span class="highlight">HTML,</span> <span class="highlight">CSS,</span> <span class="highlight">JAVASCRIPT</span>.
+         	<br> currently exploring animation, UI effect, and responsive layouts.
+         	<br><br>
+         	Let's build somthing awsome together!
+         	<br>
+         </div>	
+         <div class="project">
+         	<h2> It's my project</h2>
+         	<a href="https://codepen.io/Raveena-goswami/pen/yyNoGME/project1"target="_blank"class="project-link"> Animated Login Form</a>
+         	<a href="https://codepen.io/Raveena-goswami/pen/EajmEPe/project2"target="_blank"class="project-link">Stylish Animated Navigationbar</a>
+         	<a href="https://codepen.io/Raveena-goswami/pen/NPqaOVm/project3"target="_blank"class="project-link">Java simple calulator</a>
+         </div>
+         <script>
+         	const name="Raveena Goswami";
+         	let i = 0;
+         	const speed = 100;
+         	function typeWriter(){
+         		if (i <name.length){
+         	document.getElementById("animatedName").innerHTML += name.charAt(i);
+         	
+         	i++;
+         	set Timeout(typeWriter,speed);
+         }
+         }
+         window.onload=typeWriter;
+         </script>
+    
+    </body>
+    </html>
